@@ -424,8 +424,20 @@ section ul {
 
 @media only screen and (min-width: 870px) {
   .latest-deals {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+
+  .latest-deals li {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .latest-deals-img {
+    width: 280px;
+    height: 160px;
   }
 
   .section {
