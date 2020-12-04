@@ -423,6 +423,24 @@ section ul {
 }
 
 @media only screen and (min-width: 870px) {
+  /*test*/
+
+  /*.story-deal-discount {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    z-index: 10;
+  }
+  /***/
   .latest-deals {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
