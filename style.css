@@ -8,9 +8,14 @@ li {
   list-style: none;
 }
 
-main {
+header {
   max-width: 100%;
   margin-left: auto;
+}
+
+main {
+  width: 100%;
+  margin: auto;
 }
 
 a {
@@ -21,6 +26,11 @@ a {
 fa-facebook-official,
 .fa-search {
   color: #000;
+}
+
+.discount-image,
+.translated-text {
+  display: none;
 }
 
 .logo-container {
@@ -65,7 +75,7 @@ fa-facebook-official,
 
 .top-nav {
   background-color: #000;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .cover-stories {
@@ -126,8 +136,8 @@ fa-facebook-official,
 }
 
 .latest-deals-link {
-  padding-top: 30px;
-  padding-right: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .latest-deals-link a {
@@ -230,7 +240,7 @@ fa-facebook-official,
 }
 
 .inside-inside {
-  width: 200px;
+  width: 120px;
   position: relative;
   left: 100px;
 }
@@ -262,10 +272,6 @@ fa-facebook-official,
   grid-template-rows: repeat(9, 1fr);
   padding-left: 27px;
   padding-right: 27px;
-}
-
-.section {
-  margin: auto;
 }
 
 /*.section-article img {
@@ -535,9 +541,18 @@ section ul {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .top-nav,
+  .latest-news img {
+    width: 260px;
+    height: 130px;
+  }
+
   .lower-nav {
     display: flex;
+  }
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-container {
@@ -558,14 +573,20 @@ section ul {
     padding: 10px;
   }
 
-  .top-nav {
+  /*.top-nav {
+     width: 100%;
     justify-content: space-between;
+  }*/
+
+  .top-ul {
+    display: flex;
     align-content: flex-end;
+    padding-top: 10px;
   }
 
-  .eo {
+  .eo ul {
     display: flex;
-    /*margin-left: 100px;*/
+    /* padding-left: 125px;*/
   }
 
   .barras {
@@ -575,9 +596,9 @@ section ul {
     grid-area: main;
     background-image: linear-gradient(
         153deg,
-        rgba(252, 99, 3, 1) 0%,
-        rgba(255, 255, 255, 1) 53%,
-        rgba(0, 0, 0, 1) 100%
+        rgba(252, 99, 3, 0.7) 0%,
+        rgba(255, 255, 255, 0.1) 53%,
+        rgba(0, 0, 0, 0.8) 100%
       ),
       url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Untitled-design-2020-10-16T114024.500-796x417.png");
   }
@@ -600,3 +621,119 @@ section ul {
     margin-top: 188px;
   }
 }
+
+@media only screen and (min-width: 1165px) {
+  main {
+    width: 100%;
+    margin: auto;
+  }
+
+  .logo-container {
+    grid-area: logo;
+    display: none;
+  }
+  .nav-container {
+    grid-template-areas:
+      "top top top"
+      "low low icons";
+  }
+
+  /* .lower-nav-container {
+    margin-left: 95px;
+  }
+  .top-nav {
+    padding-left: 95px;
+  }*/
+  .top-ul {
+    padding-left: 10px;
+  }
+  .lower-nav li {
+    padding: 5px;
+  }
+
+  .latest-news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .latest-news img {
+    width: 230px;
+    height: 115px;
+  }
+  .last-card {
+    display: block;
+  }
+  .latest-funding {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 13px;
+  }
+  .latest-funding-header-links-container {
+    position: absolute;
+    top: -15px;
+    right: 1px;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .latest-funding-header {
+    padding-bottom: 15px;
+    position: relative;
+  }
+
+  /*.cover-stories {
+    height: 500px;
+  }*/
+
+  .sections-section {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section {
+    margin: auto;
+    width: 360px;
+  }
+  .latest-deals {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .latest-deals li {
+    position: relative;
+  }
+
+  .inside-deals {
+    position: relative;
+  }
+
+  .latest-deals-img {
+    width: 255px;
+    position: relative;
+  }
+  .discount-image {
+    display: block;
+    position: absolute;
+    width: 90px;
+    top: 10px;
+    left: 200px;
+  }
+  .translated-text {
+    display: block;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    transform: rotate(48deg);
+    font-weight: 900;
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+/* */
