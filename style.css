@@ -535,8 +535,37 @@ section ul {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .lupa {
-    padding-left: 40px;
+  .top-nav,
+  .lower-nav {
+    display: flex;
+  }
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: 95px auto 45px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo top icons"
+      "logo low icons";
+  }
+
+  .top-nav a,
+  .lower-nav a {
+    color: #999;
+    padding: 0 5px 0 5px;
+  }
+  .lower-nav li {
+    padding: 10px;
+  }
+
+  .top-nav {
+    justify-content: space-between;
+    align-content: flex-end;
+  }
+
+  .eo {
+    display: flex;
+    /*margin-left: 100px;*/
   }
 
   .barras {
