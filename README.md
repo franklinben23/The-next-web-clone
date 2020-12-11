@@ -13,7 +13,7 @@ This project is a clone from the [The Next Web](https://thenextweb.com/). The ma
 
 ## Live Demo
 
-[Live Demo Link](https://franklinben23.github.io/Project-1-posistionoing-and-floating-elements/.)
+[Live Demo Link](https://franklinben23.github.io/The-next-web-clone/)
 
 ## Authors
 
