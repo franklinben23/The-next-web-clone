@@ -1,10 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project 1: Positioning and Floating Elements
+# Project 2: Responsive web design
 
-![screenshot](https://user-images.githubusercontent.com/68623189/100251656-6299d700-2f15-11eb-8504-774e6342aaf6.png)
+![Screenshot](https://user-images.githubusercontent.com/68623189/101953587-fa174f00-3bd0-11eb-97f5-0b94a29f2bdd.png)
 
-This project is a clone from the [NYT article](https://www.nytimes.com/2014/03/18/science/space/detection-of-waves-in-space-buttresses-landmark-theory-of-big-bang.html?_r=0). The main goal was to apply the concepts of positioning using flexbox and float, and replicate the page to make it look like the original.
+This project is a clone from the [The Next Web](https://thenextweb.com/). The main goal was to apply the concepts of responsive web design, and replicate the page to make it look like the original.
 
 ## Built With
 
