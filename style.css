@@ -125,8 +125,7 @@ fa-facebook-official,
 
 .latest-news-title,
 .latest-funding-header h2 a,
-.section-header,
-.latest-deals-header h3 {
+.section-header {
   color: #f42;
   font-weight: 900;
   line-height: 1.1;
@@ -134,20 +133,6 @@ fa-facebook-official,
   font-size: 26px;
   margin: 20px 10px 20px;
   letter-spacing: -0.015em;
-}
-
-.latest-deals-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.latest-deals-link {
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.latest-deals-link a {
-  color: #f42;
 }
 
 .latest-news {
@@ -347,15 +332,6 @@ fa-facebook-official,
   color: #666;
 }
 
-.latest-deals li {
-  padding: 10px;
-  display: flex;
-}
-
-.latest-deals-img {
-  width: 90px;
-}
-
 .inside-deals {
   display: flex;
   flex-direction: column;
@@ -434,34 +410,46 @@ section ul {
   color: #f42;
 }
 
+.latest-deals-section {
+  padding: 0 12px 0 12px;
+}
+
+.amarilla,
+.trans-text {
+  display: none;
+}
+
+.img-tag-container {
+  padding: 10px;
+}
+
+.latest-deals-section img {
+  width: 75px;
+  height: 75px;
+}
+
+.latest-deals-main {
+  display: flex;
+  align-items: center;
+}
+
+.latest-deals-header,
+.latest-deals-header a {
+  padding: 20px 0 10px 10px;
+  color: #ff4422;
+}
+
+.latest-deals-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-deals-header h4 {
+  padding-top: 17px;
+  font-size: 28px;
+}
+
 @media only screen and (min-width: 870px) {
-  /*test*/
-
-  .story-deal-discount {
-    display: block;
-    height: 80px;
-    position: relative;
-
-    z-index: 10;
-  }
-  /***/
-  .latest-deals {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .latest-deals li {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .latest-deals-img {
-    width: 280px;
-    height: 160px;
-  }
-
   .section {
     margin: auto;
     width: 400px;
@@ -571,11 +559,6 @@ section ul {
     padding: 10px;
   }
 
-  /*.top-nav {
-     width: 100%;
-    justify-content: space-between;
-  }*/
-
   .top-ul {
     display: flex;
     padding-top: 10px;
@@ -589,6 +572,7 @@ section ul {
   .barras {
     display: none;
   }
+
   .cover-1 {
     grid-area: main;
     background-image: linear-gradient(
@@ -614,8 +598,26 @@ section ul {
       "main main second"
       "main main third";
   }
+
   .first-separator {
     margin-top: 188px;
+  }
+
+  .latest-deals-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .latest-deals-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .latest-deals-section img {
+    width: 90%;
+    max-width: 400px;
+    height: 55%;
   }
 }
 
@@ -629,21 +631,17 @@ section ul {
     grid-area: logo;
     display: none;
   }
+
   .nav-container {
     grid-template-areas:
       "top top top"
       "low low icons";
   }
 
-  /* .lower-nav-container {
-    margin-left: 95px;
-  }
-  .top-nav {
-    padding-left: 95px;
-  }*/
   .top-ul {
     padding-left: 10px;
   }
+
   .lower-nav li {
     padding: 5px;
   }
@@ -658,14 +656,17 @@ section ul {
     width: 230px;
     height: 115px;
   }
+
   .last-card {
     display: block;
   }
+
   .latest-funding {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 13px;
   }
+
   .latest-funding-header-links-container {
     position: absolute;
     top: -15px;
@@ -673,14 +674,11 @@ section ul {
     justify-content: flex-end;
     padding-right: 10px;
   }
+
   .latest-funding-header {
     padding-bottom: 15px;
     position: relative;
   }
-
-  /*.cover-stories {
-    height: 500px;
-  }*/
 
   .sections-section {
     display: grid;
@@ -695,25 +693,11 @@ section ul {
     margin: auto;
     width: 360px;
   }
-  .latest-deals {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
 
-  .latest-deals li {
+  .story-deal-discount {
     position: relative;
   }
 
-  .inside-deals {
-    position: relative;
-  }
-
-  .latest-deals-img {
-    width: 255px;
-    position: relative;
-  }
   .discount-image {
     display: block;
     position: absolute;
@@ -721,6 +705,7 @@ section ul {
     top: 10px;
     left: 200px;
   }
+
   .translated-text {
     display: block;
     position: absolute;
@@ -731,6 +716,42 @@ section ul {
     font-size: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
-}
 
-/* */
+  .latest-deals-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .amarilla,
+  .trans-text {
+    display: block;
+    position: absolute;
+  }
+
+  .trans-text {
+    top: 35px;
+    right: 20px;
+    transform: rotate(42deg);
+    font-size: 25px;
+  }
+
+  .latest-deals-section img {
+    width: 250px;
+    height: 55%;
+  }
+
+  .amarilla img {
+    width: 50%;
+  }
+
+  .amarilla {
+    width: 10%;
+    top: 10px;
+    right: -57px;
+  }
+
+  .img-tag-container {
+    padding: 10px;
+    position: relative;
+  }
+}
