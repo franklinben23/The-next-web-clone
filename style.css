@@ -18,6 +18,11 @@ main {
   margin: auto;
 }
 
+body {
+  max-width: 1250px;
+  margin: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,7 +30,7 @@ a {
 .fa-bars,
 fa-facebook-official,
 .fa-search {
-  color: #000;
+  color: #aaaaaa;
 }
 
 .discount-image,
@@ -33,55 +38,23 @@ fa-facebook-official,
   display: none;
 }
 
-.logo img {
+.navbar-logo img {
   width: 95px;
 }
 
-.logo-container {
-  grid-area: logo;
-}
-
-.top-nav {
-  grid-area: top;
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.lower-nav {
-  grid-area: low;
-}
-
-.nav-icons {
-  padding: 5px 0 0 10px;
-  display: flex;
-  grid-area: icons;
-}
-
-.barras {
-  padding-left: 8px;
-}
-
-.nav-container {
-  display: grid;
-  grid-template-columns: 95px auto 95px;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "logo top icons"
-    "logo low icons";
+.lower-nav-icons {
+  font-size: 20px;
 }
 
 .top-nav,
-.lower-nav {
+.lower-nav-links {
   display: none;
-}
-.column-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.top-nav {
-  background-color: #000;
-  /*width: 100%;*/
 }
 
 .cover-stories {
@@ -97,14 +70,6 @@ fa-facebook-official,
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Untitled-design-2020-10-16T114024.500-796x417.png");
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-position: 50%;
-  width: 100%;
-  height: 240px;
-  margin: 10px;
-  cursor: pointer;
-  /*display: flex;
-  flex-direction: column;
-  align-items: baseline;*/
 }
 
 .cover-main-article {
@@ -245,12 +210,11 @@ fa-facebook-official,
 }
 
 .funding-card-tags a {
-  /* margin-top: 5px;*/
   padding: 5px;
 }
 
 .funding-card-story-link {
-  width: 350px;
+  max-width: 340px;
   color: black;
   font-size: 12px;
   padding: 10px 10px 10px 19px;
@@ -265,23 +229,17 @@ fa-facebook-official,
   padding-right: 27px;
 }
 
-/*.section-article img {
-  min-width: 100%;
-}*/
-
 .article-header {
   padding-top: 150px;
   color: white;
   font-weight: 900;
   font-size: 19px;
-  /* position: absolute;*/
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/12/slackstock-368x276.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 100%;
   max-width: 100%;
   padding-left: 10px;
-  /*max-width: 300px;*/
 }
 
 .article-header ul {
@@ -445,11 +403,54 @@ section ul {
 }
 
 .latest-deals-header h4 {
-  padding-top: 17px;
+  padding-top: 17fpx;
   font-size: 28px;
 }
 
 @media only screen and (min-width: 870px) {
+  .navbar-logo img {
+    width: 105px;
+    height: 62px;
+  }
+
+  .top-nav,
+  .lower-nav-links {
+    display: flex;
+  }
+
+  .lower-nav-icons .barras {
+    display: none;
+  }
+
+  .top-nav {
+    background-color: black;
+  }
+
+  .top-nav a,
+  .lower-nav-links a {
+    color: #aaaaaa;
+    padding: 5px 10px 5px 10px;
+  }
+
+  .lower-nav-links {
+    padding: 5px 0 5px 0;
+  }
+
+  nav {
+    justify-content: none;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .lower-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .section {
     margin: auto;
     width: 400px;
@@ -532,47 +533,6 @@ section ul {
     height: 130px;
   }
 
-  .lower-nav {
-    display: flex;
-  }
-
-  .top-nav {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .nav-container {
-    display: grid;
-    grid-template-columns: 95px auto 45px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "logo top icons"
-      "logo low icons";
-  }
-
-  .top-nav a,
-  .lower-nav a {
-    color: #999;
-    padding: 0 5px 0 5px;
-  }
-  .lower-nav li {
-    padding: 10px;
-  }
-
-  .top-ul {
-    display: flex;
-    padding-top: 10px;
-  }
-
-  .eo ul {
-    display: flex;
-    /* padding-left: 125px;*/
-  }
-
-  .barras {
-    display: none;
-  }
-
   .cover-1 {
     grid-area: main;
     background-image: linear-gradient(
@@ -622,28 +582,13 @@ section ul {
 }
 
 @media only screen and (min-width: 1165px) {
-  main {
-    width: 100%;
-    margin: auto;
-  }
-
-  .logo-container {
-    grid-area: logo;
+  .navbar-logo img {
     display: none;
   }
 
-  .nav-container {
-    grid-template-areas:
-      "top top top"
-      "low low icons";
-  }
-
-  .top-ul {
-    padding-left: 10px;
-  }
-
-  .lower-nav li {
-    padding: 5px;
+  main {
+    width: 100%;
+    margin: auto;
   }
 
   .latest-news {
